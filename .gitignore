@@ -1,0 +1,17 @@
+.vs
+*.vcx*
+*.sln
+/Resources
+/Debug
+/x64
+/ui/newPicker
+/.vscode
+/include/Qt
+/build
+/out
+/Zip
+/bin
+/lib
+*.dll
+*.lib
+*.pdb
