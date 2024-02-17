@@ -2,6 +2,20 @@ cmake_minimum_required(VERSION 3.14)
 
 project(LeeFirebase VERSION 1.0 LANGUAGES CXX)
 
+#config directories 
+set(GLOB LEEDIRECTORIES
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib
+)
+
+#craete directories
+foreach(dir ${LEEDIRECTORIES})
+    if(EXISTS ${dir})
+        continue()
+    else()
+        execute_process(COMMAND ${CMAKE_COMMAND} -E make_directory ${dir})
+    endif()
+endforeach()
+
 add_subdirectory(sdk/firebase_cpp_sdk)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
